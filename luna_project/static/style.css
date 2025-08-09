@@ -1,0 +1,48 @@
+body {
+    background-color: #1a1a2e;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.chat-container {
+    background-color: #2e2e3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.user {
+    text-align: right;
+    margin: 5px;
+    color: #a0e7e5;
+}
+
+.luna {
+    text-align: left;
+    margin: 5px;
+    color: #fcd5ce;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #7f5af0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
