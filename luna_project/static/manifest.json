@@ -1,0 +1,16 @@
+{
+  "name": "Луна 🌙",
+  "short_name": "Луна",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#7f5af0",
+  "description": "Твоя ИИ-компаньонка, которая чувствует и говорит",
+  "icons": [
+    {
+      "src": "/static/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
