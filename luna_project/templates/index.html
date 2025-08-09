@@ -1,36 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Луна 🌙</title>
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <title>Луна 🌙</title>
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#7f5af0">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <h1>Луна 🌙</h1>
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Напиши что-нибудь..." />
-        <button onclick="sendMessage()">Отправить</button>
-    </div>
+  <!-- ... -->
 
-    <script>
-        async function sendMessage() {
-            const input = document.getElementById("user-input");
-            const text = input.value;
-            if (!text) return;
-
-            const chatBox = document.getElementById("chat-box");
-            chatBox.innerHTML += <div class="user">Ты: ${text}</div>;
-
-            const res = await fetch("/message", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ text })
-            });
-            const data = await res.json();
-            chatBox.innerHTML += <div class="luna">Луна: ${data.response}</div>;
-            input.value = "";
-        }
-      </script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/static/service-worker.js")
+        .then(() => console.log("🌙 Service Worker зарегистрирован"));
+    }
+  </script>
 </body>
-</html>
